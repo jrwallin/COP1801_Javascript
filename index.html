@@ -2,35 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Module 1</title>
-    <style>
-      body {
-        background-color: gray;
-        color: white;
-      }
-      header
-       {
-        text-align: center;
-        color: black;
-      }
-    </style>
-    <script>
-    setTimeout(helloWorld, 5000);
-    function helloWorld() {
-    	alert("Hello, World!");
-    }
-    </script>
+    <title>Module 3 Activity</title>
   </head>
   <body>
-    <header>
-      <h1>Module 01 Course Project Assignment - Hello World!</h1>
-    </header>
-    <main>
-      <p>This assignment calls for us to create a basic web page and write a JavaScript function that returns the string "Hello, World!" after the page has been loaded for 5 seconds.</p>
-    </main>
+    <h2>Learning JavaScript Functions</h2>
+    <p>Create a JavaScript function that will take a string and reverse the order of that string.</p>
+    <p>View the web browser developer console to see the reversed string.</p>
+    <p><u>String name:</u> <strong>Jeremie Wallin</strong></p>
 
-    <footer>
-      <p>Submit a microsoft word document that contains screen shots of the loaded page displaying the string.  Provide a link to the uploaded page on Rasmussen SOTD as well as a link to your GitHub repository.</p>
-    </footer>
+    <script>
+    function reverseString(name) {
+      return name.split("").reverse().join("")
+    }
+
+    console.log(reverseString("Jeremie Wallin"));
+    </script>
+
   </body>
 </html>
