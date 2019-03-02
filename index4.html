@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="themes/Theme1.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+
+    <!-- Allows the page displayed in the browser, styling and theme chosen, logo at top of page.-->
+    <div id="page" data-role="page" data-theme="a">
+
+      <div data-role="header" data-theme="a">
+	       <h1>Module 03 Course Project</h1>
+	    </div>
+
+      <div data-role="content">
+        <form>
+          </br>
+          <label for="favFoods">List your favorite foods:</label>
+          <textarea class="text" placeholder="Enter your favorite foods here!" autofocus cols="40" rows="8" name="favFoods" id="favFoods" data-clear-btn="true"></textarea>
+        </form>
+        </br>
+        <button class="ui-btn" onclick="myFunction()">Submit Favorites</button>
+        <button class="ui-btn" onclick="myQuestion()">Question for You?</button>
+        <p id="example1"></p>
+      </div>
+
+      <script>
+        function myFunction(){
+          var y = document.getElementById("example1");
+          var x = document.getElementById("favFoods").value;
+          y.innerHTML=x;
+        }
+      </script>
+      <script>
+        function myQuestion(){
+          var favorite = prompt("Which of the following is your favorite meal: tacos, meatloaf, or spaghetti?");
+          if (favorite == null || favorite == "")
+          {
+            alert(" :( We would really like to know your favorite meal!");
+          }
+          else if (favorite == "tacos" || favorite == "Tacos")
+          {
+            alert("I love tacos, too!  They are my favorite!");
+          }
+          else if (favorite == "meatloaf" || favorite == "Meatloaf")
+          {
+            alert("Yuck!  Meatloaf makes me sick....");
+          }
+          else if (favorite == "spaghetti" || favorite == "Spaghetti")
+          {
+            alert("Thats GREAT! I like spaghetti too!");
+          }
+        }
+      </script>
+
+      </br>
+      </br>
+
+        <div data-role="footer" data-theme="a">
+          <h4>Copyright &copy; 2019 Wallin.  All rights reserved.</h4>
+	      </div>
+
+      </div>
+    </body>
+</html>
