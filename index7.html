@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Module 5 Activity</title>
+  </head>
+  <body>
+
+    <h1>Module 6 Activity</h1>
+    <p>Calculate the square footage of a rectangular room.</p>
+    <p>(Area = length * width)</p>
+    <br />
+    <h2>Input Measurements: </h2>
+    <form id="myForm">
+      Length: <input type="text" name="lengthTotal" id="lengthTotal" value=""><br /><br />
+      Width: <input type="text" name="widthTotal" id="widthTotal" value=""><br /><br />
+      <input type="button" value="Calculate" onclick="myFunction()">
+    </form>
+    <br />
+<h3>Total Square footage:</h3>
+<p id="example1">Area =</p>
+
+<script>
+  function myFunction(){
+    var x = document.getElementById("example1");
+    var length = document.getElementById("lengthTotal").value;
+    var width = document.getElementById("widthTotal").value;
+    var total = length * width
+    x.innerHTML = "Area = " + total + " " + "sq ft";
+  }
+</script>
+
+  </body>
+</html>
