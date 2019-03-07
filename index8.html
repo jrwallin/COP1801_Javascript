@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Module 5 Activity</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Module 5 Activity</h1>
+    <p>Write a JavaScript function to get the values of a form.</p>
+    <br />
+    <h2>Input fields:</h2>
+    <form id="myForm">
+      First Name: <input type="text" name="fname" id="fname" value="" style="width: 200px;"><br /><br />
+      Last Name: <input type="text" name="lname" id="lname" value="" style="width: 202px;"><br /><br />
+      Address:  <input type="text" name="address" id="address" value="" style="width: 219px;"><br /><br />
+      City:  <input type="text" name="city" id="city" value="" style="width: 243px;"><br /><br />
+      State: <input type="text" name="state" id="state" value="" style="width: 240px;"><br /><br />
+      <input type="button" value="Submit" onclick="myFunction()">
+    </form>
+    <br />
+<p>Submitted form information is displayed here!</p>
+
+<table style="width:50%">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td id="example1" onmouseover="mouseOver()">&nbsp</td>
+    <td id="example2" onmouseover="mouseOver1()">&nbsp</td>
+    <td id="example3" onmouseover="mouseOver2()">&nbsp</td>
+    <td id="example4" onmouseover="mouseOver3()">&nbsp</td>
+    <td id="example5" onmouseover="mouseOver4()">&nbsp</td>
+  </tr>
+</table>
+
+<script>
+  function myFunction(){
+    var v = document.getElementById("example1");
+    var w = document.getElementById("example2");
+    var x = document.getElementById("example3");
+    var y = document.getElementById("example4");
+    var z = document.getElementById("example5");
+    var firstName = document.getElementById("fname").value;
+    var lastName = document.getElementById("lname").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var state = document.getElementById("state").value;
+    v.innerHTML = firstName;
+    w.innerHTML = lastName;
+    x.innerHTML = address;
+    y.innerHTML = city;
+    z.innerHTML = state;
+  }
+
+  function mouseOver(){
+    document.getElementById("example1").style.color = "blue";
+    document.getElementById("example1").style.fontWeight = "900";
+  }
+
+  function mouseOver1(){
+    document.getElementById("example2").style.color = "blue";
+    document.getElementById("example2").style.fontWeight = "900";
+  }
+
+  function mouseOver2(){
+    document.getElementById("example3").style.color = "blue";
+    document.getElementById("example3").style.fontWeight = "900";
+  }
+
+  function mouseOver3(){
+    document.getElementById("example4").style.color = "blue";
+    document.getElementById("example4").style.fontWeight = "900";
+  }
+
+  function mouseOver4(){
+    document.getElementById("example5").style.color = "blue";
+    document.getElementById("example5").style.fontWeight = "900";
+  }
+
+
+</script>
+
+  </body>
+</html>
